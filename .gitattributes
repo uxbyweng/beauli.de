@@ -1,5 +1,8 @@
-﻿# Basis: Alle Textdateien normalisieren
+# Basis: Alle Textdateien normalisieren
 * text=auto
+
+# Erzwinge LF für bestimmte Textdateien (nie CRLF auschecken)
+*.htaccess text eol=lf
 
 # Erzwinge LF für Skripte/CI-Dateien (nie CRLF auschecken)
 *.sh  text eol=lf

@@ -1,0 +1,21 @@
+name: Deploy .htaccess (manual)
+
+on:
+    workflow_dispatch: {}
+
+jobs:
+    deploy-htaccess:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: SFTP Deploy .htaccess only
+              uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+              with:
+                  server: ${{ secrets.FTP_SERVER }}
+                  username: ${{ secrets.FTP_USERNAME }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  port: 22
+                  sftp_only: true
+                  local_path: "./.htaccess"
+                  remote_path: "/"
+                  sftpArgs: "-o StrictHostKeyChecking=no"
