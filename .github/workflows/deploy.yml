@@ -1,4 +1,4 @@
-name: Deploy via FTP
+name: Deploy via SFTP
 
 on:
     push:
@@ -12,22 +12,21 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: FTP Deploy
-              uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+            - name: SFTP Deploy
+              uses: wlixcc/SFTP-Deploy-Action@v1.2.4
               with:
-                  server: ${{ secrets.FTP_SERVER }}
-                  username: ${{ secrets.FTP_USERNAME }}
+                  server: ${{ secrets.FTP_SERVER }} # z. B. beauli.de oder sftp.deinhost.tld
+                  username: ${{ secrets.FTP_USERNAME }} # dein sftp_* Nutzer
                   password: ${{ secrets.FTP_PASSWORD }}
-                  protocol: ftps-legacy
-                  port: 21
-                  server-dir: / # ggf. /httpdocs/ o.ä.
+                  port: 22
+                  local_path: ./* # was hochgeladen wird
+                  remote_path: / # Webroot: oft /httpdocs/ oder /htdocs/
+                  sftp_only: true
                   exclude: |
-                      **/.git*
-                      **/.github/**
+                      .git*
+                      .github/**
                       .config/private.php
                       googleb6a791f4d5d7fcc6.html
                       **/*.md
                       **/*.MD
                       **/*.markdown
-                  dangerous-clean-slate: false
-                  log-level: verbose
