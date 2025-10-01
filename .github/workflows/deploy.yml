@@ -15,18 +15,12 @@ jobs:
             - name: SFTP Deploy
               uses: wlixcc/SFTP-Deploy-Action@v1.2.4
               with:
-                  server: ${{ secrets.FTP_SERVER }} # z. B. beauli.de oder sftp.deinhost.tld
+                  server: ${{ secrets.FTP_SERVER }} # z. B. beauli.de oder sftp.<host>.tld
                   username: ${{ secrets.FTP_USERNAME }} # dein sftp_* Nutzer
                   password: ${{ secrets.FTP_PASSWORD }}
                   port: 22
-                  local_path: ./* # was hochgeladen wird
-                  remote_path: / # Webroot: oft /httpdocs/ oder /htdocs/
                   sftp_only: true
-                  exclude: |
-                      .git*
-                      .github/**
-                      .config/private.php
-                      googleb6a791f4d5d7fcc6.html
-                      **/*.md
-                      **/*.MD
-                      **/*.markdown
+                  local_path: ./* # kopiert KEINE Dotfiles/Ordner
+                  remote_path: /httpdocs/ # <— ANPASSEN: dein Webroot (oft /httpdocs/, /htdocs/ oder /public_html/)
+                  # optional: Host-Key-Check deaktivieren, falls nötig
+                  sftpArgs: "-o StrictHostKeyChecking=no"
