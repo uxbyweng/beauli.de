@@ -41,14 +41,16 @@ program/            # academy program
 register/           # registration form
 science/            # scientific background
 .htaccess           # rewrites, caching, error handling
+```
 
 ## License
-- Code: MIT
-- Content/Design/Images: © Park-Klinik Birkenwerder
+
+-   Code: MIT
+-   Content/Design/Images: © Park-Klinik Birkenwerder
 
 ## Contact
-- Maintainer (Web Development): Karsten Weng · Berlin
-- LinkedIn: [kweng](https://www.linkedin.com/in/kweng/)
-- Organization: [Park-Klinik Birkenwerder](https://www.park-klinik-birkenwerder.de/)
-- [info@beauli.de](mailto:info@beauli.de)
-```
+
+-   Maintainer (Web Development): Karsten Weng · Berlin
+-   LinkedIn: [kweng](https://www.linkedin.com/in/kweng/)
+-   Organization: [Park-Klinik Birkenwerder](https://www.park-klinik-birkenwerder.de/)
+-   [info@beauli.de](mailto:info@beauli.de)
