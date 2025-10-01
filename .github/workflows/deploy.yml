@@ -18,8 +18,8 @@ jobs:
                   server: ${{ secrets.FTP_SERVER }}
                   username: ${{ secrets.FTP_USERNAME }}
                   password: ${{ secrets.FTP_PASSWORD }}
-                  protocol: ftps-implicit # <— WICHTIG: implizites FTPS
-                  port: 990 # <— WICHTIG: Port 990
+                  protocol: ftps # explizites FTPS (Port 21)
+                  port: 21
                   server-dir: / # ggf. /httpdocs/ o.ä.
                   exclude: |
                       **/.git*
@@ -30,5 +30,4 @@ jobs:
                       **/*.MD
                       **/*.markdown
                   dangerous-clean-slate: false
-                  log-level: verbose # mehr Debug-Infos
-                  # dry-run: true           # optional: erst testen, was passieren würde
+                  log-level: verbose
