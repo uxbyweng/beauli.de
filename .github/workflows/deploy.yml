@@ -18,7 +18,7 @@ jobs:
                   server: ${{ secrets.FTP_SERVER }}
                   username: ${{ secrets.FTP_USERNAME }}
                   password: ${{ secrets.FTP_PASSWORD }}
-                  protocol: ftps # explizites FTPS (Port 21)
+                  protocol: ftps-legacy
                   port: 21
                   server-dir: / # ggf. /httpdocs/ o.ä.
                   exclude: |
