@@ -12,15 +12,14 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v4
 
-            - name: SFTP Deploy
+            - name: SFTP Deploy (STRATO)
               uses: wlixcc/SFTP-Deploy-Action@v1.2.4
               with:
-                  server: ${{ secrets.FTP_SERVER }} # z. B. beauli.de oder sftp.<host>.tld
-                  username: ${{ secrets.FTP_USERNAME }} # dein sftp_* Nutzer
-                  password: ${{ secrets.FTP_PASSWORD }}
+                  server: ${{ secrets.FTP_SERVER }} # ssh.strato.de
+                  username: ${{ secrets.FTP_USERNAME }} # dein SFTP/SSH-User bei STRATO
+                  password: ${{ secrets.FTP_PASSWORD }} # Passwort
                   port: 22
                   sftp_only: true
-                  local_path: ./* # kopiert KEINE Dotfiles/Ordner
-                  remote_path: /httpdocs/ # <— ANPASSEN: dein Webroot (oft /httpdocs/, /htdocs/ oder /public_html/)
-                  # optional: Host-Key-Check deaktivieren, falls nötig
+                  local_path: ./* # lädt keine Dotfiles wie .github
+                  remote_path: / # bei 404 auf /httpdocs/ ändern
                   sftpArgs: "-o StrictHostKeyChecking=no"
