@@ -45,7 +45,7 @@ include($_SERVER["DOCUMENT_ROOT"] . "/include/header.php");
                    The number of participants is limited to 8 in order to provide more intimacy and closeness.
                </p>
                <p>
-                    We are very much looking forward to our 22th BEAULI™ academy in the new form. Come to Birkenwerder in beautiful May.
+                    We are very much looking forward to our 22th BEAULI™ academy in the new form. Come to Birkenwerder in beautiful April.
                </p>
                <p>
                    <strong>U. Tanzella, K. Ueberreiter, A. Bell</strong><br>
