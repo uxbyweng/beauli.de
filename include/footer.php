@@ -96,16 +96,16 @@
 <script src="/js/validator.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script src="/js/theme.js"></script>
-<link rel="stylesheet" href="/css/jquery.fancybox.min.css"/>
-<script src="/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript">
+<!--link rel="stylesheet" href="/css/jquery.fancybox.min.css"/-->
+<!--script src="/js/jquery.fancybox.min.js"></script-->
+<!--script type="text/javascript">
 	$( document ).ready( function () {
 		$( ".fancybox" ).fancybox( {
 			openEffect: 'none',
 			closeEffect: 'none'
 		} );
 	} );
-</script>
+</script-->
 <script src="/js/youtube_embed.js"></script> 
 <?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/include/cookieconsent.php" ); ?>
 </body>
