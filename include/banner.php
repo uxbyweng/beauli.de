@@ -1,0 +1,1 @@
+<img class="img-responsive" src="/images/beauli_academy_banner.jpg" alt="BEAULI Academy" width="300">

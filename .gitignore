@@ -1,0 +1,23 @@
+# Root-gebundene Dateien
+/.config/private.php
+/googleb6a791f4d5d7fcc6.html
+
+# Editor / System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Caches / Logs / Temp
+*.log
+.cache/
+cache/
+tmp/
+*.bak
+
+# Node/Composer (falls vorhanden)
+node_modules/
+vendor/
+
+# GitHub/CI
+*.env

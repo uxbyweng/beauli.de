@@ -1,0 +1,21 @@
+# ########################################### #
+# robots.txt from https://www.beauli.de
+# ########################################### #
+# Validator and Testing Tool: 
+# https://technicalseo.com/tools/robots-txt/
+# ########## ########## ########## ########## #
+# # Last update: 01.10.2025
+# ########## ########## ########## ########## #
+
+# valid for all robots
+User-agent: *
+
+# disallow
+Disallow: /.config/
+Disallow: /css/
+Disallow: /imgages/
+Disallow: /include/
+Disallow: /js/
+
+# path of current sitemap :
+# Sitemap: https://www.beauli.de/sitemap.xml 
