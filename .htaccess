@@ -3,6 +3,9 @@
   RewriteEngine On
   RewriteBase /
 
+  # Spezifische 301-Weiterleitung: /review/2018/ -> Startseite (ein Hop, https + www)
+  RewriteRule ^review/2018/?$ https://www.beauli.de/ [L,R=301]
+
   # Trailing slash entfernen (keine Ordner)
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)/$ /$1 [L,R=301]
