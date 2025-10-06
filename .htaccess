@@ -8,6 +8,7 @@
   RewriteRule ^review/2019/?$ - [L,G]
   RewriteRule ^faculty/?$ - [L,G]
   RewriteRule ^organization/?$ - [L,G]
+  RewriteRule ^organisation/?$ - [L,G]
   RewriteRule ^certification/?$ - [L,G]
 
   # Trailing slash entfernen (keine Ordner)
